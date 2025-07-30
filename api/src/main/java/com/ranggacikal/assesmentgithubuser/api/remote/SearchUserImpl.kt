@@ -12,7 +12,7 @@ class SearchUserImpl @Inject constructor(
         query: String,
         perPage: String,
         page: String
-    ): List<SearchUserResponse> {
+    ): SearchUserResponse {
         return apiService.searchUser(query, perPage, page)
     }
 }

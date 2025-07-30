@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.library)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -50,5 +51,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
+
+    debugImplementation(libs.library)
+    releaseImplementation(libs.library.no.op)
 }

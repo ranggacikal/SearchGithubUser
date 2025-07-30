@@ -1,4 +1,12 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edt_search_hint">Search User</string>
+    <string name="image_user">imageUser</string>
+    <string name="sample_text">Sample text</string>
+    <string name="btn_saved_user_title">See Saved Users</string>
+    <string name="handling_common_error">Error On Hit Api</string>
+    <string name="tv_loading_title">Loading...</string>
+    <string name="tv_dialog_error_title">Terjadi Kesalahan</string>
+    <string name="btn_dialog_error_title">Tutup</string>
 </resources>

@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.viewbinding.ViewBinding
+import com.ranggacikal.assesmentgithubuser.feature.user.ui.dialog.ErrorDialog
+import com.ranggacikal.assesmentgithubuser.feature.user.ui.dialog.LoadingDialog
 import com.ranggacikal.assesmentgithubuser.feature.user.utils.ResultState
 
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
 
     private var _binding: VB? = null
     protected val binding get() = _binding!!
+    private lateinit var loadingDialog: LoadingDialog
+    private lateinit var errorDialog: ErrorDialog
 
     abstract fun bindingInflater(inflater: LayoutInflater, container: ViewGroup?): VB
 
@@ -22,13 +26,24 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = bindingInflater(inflater, container)
+        loadingDialog = LoadingDialog(requireContext())
+        errorDialog = ErrorDialog(requireContext())
         return binding.root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-        //Dismiss Dialog
+        loadingDialog.dismiss()
+    }
+
+    fun showProgressDialog(isShow: Boolean) {
+        if (isShow) loadingDialog.show()
+        else loadingDialog.dismiss()
+    }
+
+    fun showErrorDialog(message: String, onClose: (() -> Unit)? = null) {
+        errorDialog.show(message, onClose)
     }
 
     protected fun <T> observeDataFlow(

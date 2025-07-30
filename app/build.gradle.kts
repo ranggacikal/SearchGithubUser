@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.library)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -39,6 +40,9 @@ android {
             excludes += "META-INF/gradle/incremental.annotation.processors"
         }
     }
+    viewBinding {
+        enable = true
+    }
 }
 
 dependencies {
@@ -55,5 +59,5 @@ dependencies {
     implementation(project(":feature-user"))
     implementation(project(":api"))
     implementation(libs.hilt.android)
-    implementation(libs.hilt.compiler)
+    kapt(libs.hilt.compiler)
 }

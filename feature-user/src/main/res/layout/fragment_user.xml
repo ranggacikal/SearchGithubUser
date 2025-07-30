@@ -1,13 +1,44 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.ranggacikal.assesmentgithubuser.feature.user.ui.UserFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/edt_search_user"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/edt_search_height"
+        android:layout_marginHorizontal="@dimen/edt_search_margin_horizontal"
+        android:layout_marginTop="@dimen/edt_search_margin_top"
+        android:hint="@string/edt_search_hint"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-</FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list_user"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/zero_dp"
+        android:layout_marginVertical="@dimen/rv_margin_vetical"
+        tools:listitem="@layout/item_user"
+        app:layout_constraintTop_toBottomOf="@+id/edt_search_user"
+        app:layout_constraintStart_toStartOf="@id/edt_search_user"
+        app:layout_constraintEnd_toEndOf="@id/edt_search_user"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_saved_user"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="@dimen/edt_search_height"
+        android:visibility="gone"
+        android:layout_marginHorizontal="@dimen/btn_saved_user_margin_horizontal"
+        android:text="@string/btn_saved_user_title"
+        app:layout_constraintTop_toBottomOf="@id/edt_search_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

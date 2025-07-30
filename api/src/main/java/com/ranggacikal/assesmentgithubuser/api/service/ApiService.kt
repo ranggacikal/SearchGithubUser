@@ -14,5 +14,5 @@ interface ApiService {
         @Query(QUERY_Q) query: String,
         @Query(QUERY_NUMBER_OF_PAGE) perPage: String,
         @Query(QUERY_PAGE) page: String
-    ): List<SearchUserResponse>
+    ): SearchUserResponse
 }
