@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/cl_dialog_user_detail_padding"
+    android:background="@drawable/bg_dialog_error">
+
+    <ImageView
+        android:id="@+id/iv_user_detail"
+        android:layout_width="@dimen/iv_dialog_user_detail_size"
+        android:layout_height="@dimen/iv_dialog_user_detail_size"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_failed_load_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_login_name_user_detail"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_login_name_dialog_user_detail_margin_top"
+        android:gravity="center"
+        android:text="@string/sample_text"
+        android:textColor="@color/black"
+        android:textSize="@dimen/tv_login_name_dialog_user_detail"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_user_detail" />
+
+    <TextView
+        android:id="@+id/tv_name_user_detail"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_name_dialog_user_detail_margin_top"
+        android:gravity="center"
+        android:text="@string/sample_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_login_name_user_detail" />
+
+    <TextView
+        android:id="@+id/tv_email_user_detail"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_name_dialog_user_detail_margin_top"
+        android:gravity="center"
+        android:text="@string/sample_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_user_detail" />
+
+    <TextView
+        android:id="@+id/tv_bio_user_detail"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tv_name_dialog_user_detail_margin_top"
+        android:gravity="center"
+        android:text="@string/sample_text"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_email_user_detail" />
+
+    <Button
+        android:id="@+id/btn_close_dialog_detail_user"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_close_title"
+        android:background="@drawable/bg_button_red"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/btn_save_dialog_detail_user"
+        app:layout_constraintStart_toStartOf="@id/btn_save_dialog_detail_user"
+        app:layout_constraintEnd_toEndOf="@id/btn_save_dialog_detail_user"
+        android:layout_marginTop="@dimen/card_item_user_margin"/>
+
+    <Button
+        android:id="@+id/btn_save_dialog_detail_user"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_save_detail_user_title"
+        android:background="@drawable/bg_button_blue"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@+id/tv_bio_user_detail"
+        app:layout_constraintStart_toStartOf="@id/tv_bio_user_detail"
+        app:layout_constraintEnd_toEndOf="@id/tv_bio_user_detail"
+        android:layout_marginTop="@dimen/btn_detail_user_margin_top"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

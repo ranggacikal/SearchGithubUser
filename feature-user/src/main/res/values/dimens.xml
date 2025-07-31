@@ -23,4 +23,19 @@
     <dimen name="tv_dialog_error_message_size">16sp</dimen>
     <dimen name="tv_dialog_error_message_margin">12dp</dimen>
     <dimen name="btn_dialog_error_margin">20dp</dimen>
+    <dimen name="cl_dialog_user_detail_padding">24dp</dimen>
+    <dimen name="iv_dialog_user_detail_size">200dp</dimen>
+    <dimen name="tv_login_name_dialog_user_detail">18sp</dimen>
+    <dimen name="tv_login_name_dialog_user_detail_margin_top">16dp</dimen>
+    <dimen name="tv_name_dialog_user_detail_margin_top">8dp</dimen>
+    <dimen name="btn_detail_user_margin_horizontal">18dp</dimen>
+    <dimen name="btn_detail_user_margin_top">22dp</dimen>
+    <dimen name="tv_title_saved_user_text_size">24sp</dimen>
+    <dimen name="cv_saved_user_margin">8dp</dimen>
+    <dimen name="cv_saved_user_elevation">4dp</dimen>
+    <dimen name="cl_item_saved_user_padding">12dp</dimen>
+    <dimen name="iv_item_saved_user_size">64dp</dimen>
+    <dimen name="text_size_12">12dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
 </resources>

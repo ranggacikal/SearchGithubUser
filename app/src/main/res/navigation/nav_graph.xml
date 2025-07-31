@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/userFragment">
+
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.ranggacikal.assesmentgithubuser.feature.user.ui.UserFragment"
+        android:label="user">
+
+        <deepLink
+            app:uri="ranggacikal://assesmentgithub/user-fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/savedUserFragment"
+        android:name="com.ranggacikal.assesmentgithubuser.feature.user.ui.SavedUserFragment"
+        android:label="user">
+
+        <deepLink
+            app:uri="ranggacikal://assesmentgithub/saved-user-fragment"/>
+
+    </fragment>
+
+</navigation>

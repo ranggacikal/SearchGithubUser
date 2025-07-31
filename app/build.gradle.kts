@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.hilt.library)
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -35,11 +36,6 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
-    packaging {
-        resources {
-            excludes += "META-INF/gradle/incremental.annotation.processors"
-        }
-    }
     viewBinding {
         enable = true
     }
@@ -60,4 +56,6 @@ dependencies {
     implementation(project(":api"))
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 }

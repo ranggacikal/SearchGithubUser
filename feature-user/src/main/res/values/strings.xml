@@ -9,4 +9,8 @@
     <string name="tv_loading_title">Loading...</string>
     <string name="tv_dialog_error_title">Terjadi Kesalahan</string>
     <string name="btn_dialog_error_title">Tutup</string>
+    <string name="btn_close_title">CLOSE</string>
+    <string name="btn_save_detail_user_title">SAVE</string>
+    <string name="tv_title_saved_user">SAVED USERS</string>
+    <string name="btn_delete_text_title">Delete</string>
 </resources>
